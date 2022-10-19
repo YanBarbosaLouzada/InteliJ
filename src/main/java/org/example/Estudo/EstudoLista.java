@@ -26,7 +26,7 @@ public class EstudoLista {
         numeros.remove(0);
 
         //Adiciona um elmento novo na posição que deseja e move o restante
-        numeros.add(1,200);
+        numeros.add(1, 200);
 
         System.out.println(numeros.size()); // ver o tamanho do array
 
@@ -40,8 +40,8 @@ public class EstudoLista {
 
 
         //para cada valor dentro do array ele executa o codigo
-        for (int numero: numeros){
-        System.out.println(numero);
+        for (int numero : numeros) {
+            System.out.println(numero);
 
         }
 
@@ -59,10 +59,6 @@ public class EstudoLista {
         System.out.println(numeros.indexOf(1000));          //Para ao encontrar o primeiro numero (1000).
 
         System.out.println(numeros.lastIndexOf(200));    //Mostra o ultimo numero encontrado(1000).
-
-
-
-
 
 
     }
