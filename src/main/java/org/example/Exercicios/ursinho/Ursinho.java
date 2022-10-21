@@ -1,4 +1,4 @@
-package org.example.Estudo.poo;
+package org.example.Exercicios.ursinho;
 
 import java.util.ArrayList;
 
@@ -23,10 +23,7 @@ public class Ursinho {
     private double peso;
     private int idade;
     private boolean estaDormindo;
-
-    boolean comer;
-
-     ArrayList<String> bucho= new ArrayList<String>();
+    private ArrayList<Comida> bucho;
 
 
     Ursinho(String nome, int idade, double peso) {
@@ -34,44 +31,38 @@ public class Ursinho {
         this.idade = idade;
         this.peso = peso;
         this.estaDormindo = false;
-        this.comer= false;
+        this.bucho = new ArrayList<>(); // vazio
     }
 
 
     //-------------------------METODOS---------------------------//
 
-
-
-    //--- dormir--//
-    void dormir(){
-        this.estaDormindo = true;
-    }
-    void acorda(){
-        this.estaDormindo = false;
-    }
-    void dormir(String dormir){
-        if (!this.estaDormindo) {
-            this.dormir();
-        }
-    }
-
-
-
-    //---comer --//
-
-    void comer(String comida){
-        if (this.estaDormindo == true) {
-            System.out.println("eu nao como dormindo e nem como duas comidas iguais");
-        }else {
-
-            System.out.println("Estou comendo " +comida);
+    public void comer(Comida comida){
+        if (!this.estaDormindo && !this.bucho.contains(comida)) {
             this.bucho.add(comida);
-            this.peso+=(Comida.peso);
-            System.out.println(peso);
+            this.peso += comida.getPeso();
         }
-
+    }
+    public void dormir(int horas){
+        this.estaDormindo = true;
+        double ppPeso = this.peso*0.1;
+        double quilosPedidos = horas*ppPeso;
+        this.peso -=quilosPedidos;
+        System.out.println(this.peso);
     }
 
+    public void acordar(){
+        this.estaDormindo =false;
+    }
+
+    public static void main(String[] args) {
+        Ursinho ted = new Ursinho("ted",1,15.0);
+        Comida batata = new Comida("Batata",5.0);
+
+
+
+
+    }
 
 
 
