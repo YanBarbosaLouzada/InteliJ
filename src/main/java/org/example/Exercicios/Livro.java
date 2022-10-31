@@ -46,6 +46,7 @@ public class Livro {
        System.out.println( pedraFilosofal.autor.getNome());
 
        livrosJk.add(pedraFilosofal);
+        System.out.println(livrosJk);
 
 
     }

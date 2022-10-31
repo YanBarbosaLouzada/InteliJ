@@ -1,6 +1,6 @@
 package org.example.Estudo.poo;
 
-public class Cachorro extends Pet{
+    public class Cachorro extends Pet{
 
 
     private String comidaFavorita;

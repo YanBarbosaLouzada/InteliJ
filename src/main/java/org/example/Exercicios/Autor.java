@@ -4,18 +4,22 @@ public class Autor {
     private String nome;
     private String email;
 
-
+    //construtor
 
     public Autor(String nome, String email){
         this.nome= nome;
         this.email= email;
 
     }
-    //objt que ta chamando escrever o livro (THIS)
+
+    // funcao escrever
+
     public Livro escreverLivro (String nome, double preco ){
         Livro novoLivro = new Livro(nome, this, preco);
         return novoLivro;
     }
+
+    //get e set
 
     public String getNome() {
         return nome;
